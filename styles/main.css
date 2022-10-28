@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #F63366;
+    --background-color: #f1f1f1;
+    --text-color: #404040;
+    --button-text-color: #fff;
+}
+
+* {
+    font-family: 'Readex Pro';
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--text-color) !important;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+}
+
+ul {list-style-type: none;}
+
+hr {
+    border: 1px solid #ccc;
+    margin-top: 0px;
+    margin-bottom: 5%;
+}
+
+table {
+    width: 100%
+}
+
+th,td {
+    font-weight: 400;
+    font-size: .85rem;
+}
+
+button {
+    background-color: var(--primary-color) !important;
+    color: var(--button-text-color) !important;
+}
+
+button:hover {
+    background-color: var(--background-color) !important;
+    color: var(--primary-color) !important;
+}
+
+
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
