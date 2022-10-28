@@ -1,10 +1,8 @@
 from pathlib import Path
 
 import streamlit as st
-import webbrowser
 from PIL import Image
 import pandas as pd
-
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -66,11 +64,8 @@ with col2:
     st.write("☎", PHONE)
 
 
-# --- SOCIAL LINKS ---
+# --- LINKS ---
 st.write('\n')
-#cols = st.columns(len(SOCIAL_MEDIA))
-#for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-#    cols[index].write(f"[{platform}]({link})")
 
 colLink1, colLink2, colLink3 , colLink4= st.columns(4, gap="small")
 
@@ -78,19 +73,10 @@ linkedinUrl = 'https://www.linkedin.com/in/nickali/'
 githubUrl = 'https://github.com'
 
 with colLink1:
-    if st.button('LinkedIn'):
-        webbrowser.open_new_tab(linkedinUrl)
+    st.markdown('[[LinkedIn]](https://linkedin.com/in/nickali)')
 
 with colLink2:
-    if st.button('Resume Code'):
-        webbrowser.open_new_tab(githubUrl)
-
-with colLink3:
-    st.write("&nbsp;")
-
-with colLink3:
-    st.write("&nbsp;")
-
+    st.markdown('[[View Resume Code]](https://github.com/nickali/streamlit-resume)')
     
 # --- Summary ---
 st.write('\n')
@@ -100,16 +86,16 @@ st.write(
     """
     )
 
-# --- EXPERIENCE & QUALIFICATIONS ---
+
 # --- WORK HISTORY ---
 st.write('\n')
 st.subheader("Skills")
 st.write("---")
 
+# Print out table of skills
+
 d = {
-
     '✔️ Marketing Strategy': ['✔️Developer Marketing', '✔️Campaign Planning and Execution', '✔️Growth Marketing'], '✔️Product Marketing': [ '✔️Branding and Positioning', '✔️Marketing Operations', '✔️P&L Management'], '✔️Startups, Scaleups, Market Expansion' : ['✔️Mentorship', '✔️Player / Coach', '✔️Team Creation and Expansion']
-
 }
 
 df = pd.DataFrame(data=d)
